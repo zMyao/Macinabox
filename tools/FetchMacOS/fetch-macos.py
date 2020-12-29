@@ -136,11 +136,11 @@ class MacOSProduct:
 
 @click.command()
 @click.option('-o', '--output-dir', default="BaseSystem/", help="Target directory for package output.")
-@click.option('-v', '--catalog-version', default="10.15", help="Version of catalog.")
+@click.option('-v', '--catalog-version', default="10.16", help="Version of catalog.")
 @click.option('-c', '--catalog-id', default="PublicRelease", help="Name of catalog.")
 @click.option('-p', '--product-id', default="", help="Product ID (as seen in SoftwareUpdate).")
 @click.option('-k', '--keyword', default=None, help="Keyword filter for packages.")
-def fetchmacos(output_dir="BaseSystem/", catalog_version="10.15", catalog_id="PublicRelease", product_id="", keyword=None):
+def fetchmacos(output_dir="BaseSystem/", catalog_version="10.16", catalog_id="PublicRelease", product_id="", keyword=None):
     # Get the remote catalog data
     remote = SoftwareService(catalog_version, catalog_id)
     catalog = remote.getcatalog()
